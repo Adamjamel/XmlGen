@@ -1,56 +1,152 @@
-<mvc:View controllerName="sap.training.exc.controller.Overview"
-          xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core"
-          xmlns:mvc="sap.ui.core.mvc"
-          xmlns="sap.m">
-
-     <Page title="Flight Customers">
+<mvc:View
+    controllerName="sap.training.exc.controller.Overview"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    
+    <Page title="Application Generator ">
         <content>
-            <Panel headerText="New Customer" expandable="true" expanded="true">
-				<content>								
-                    <f:SimpleForm layout="ColumnLayout" editable="true">
-                        <f:toolbar>
-                            <Toolbar>
-                                <content>
-                                    <ToolbarSpacer/>
-                                    <Button icon="sap-icon://create" text="Create Customer"/>
-                                </content>
-                            </Toolbar>
-                        </f:toolbar>
-                        <f:content>
-                            <core:Title text="General Data"/>
-                                <Label text="Form"/>
-                                <Input value=""/>
+            <Panel
+                headerText="Create Your Custom Application "
+                expandable="true"
+                expanded="true"
+            >
+                <content>
+                    <VBox
+                        width="100%"
+                        id="input"
+                        class=""
+                    >
+                        <Toolbar>
+                            <content>
+                                <ToolbarSpacer />
+                                <Button
+                                    icon="sap-icon://create"
+                                    text="Create Entity"
+                                />
+                            </content>
+                        </Toolbar>
 
-                                <Label text="Customer Name"/>
-                                <Input value=""/>
+                        <VBox
+                            width="100%"
+                            id="Entities"
+                            class="section"
+                        >
+                            <VBox
+                                id="EntityType1"
+                                class="tag-group "
+                            >
+                                <VBox
+                                    class="tag"
+                                    id="EntityType"
+                                >
+                                    <Label text="Create your Own Entities" design="Bold" />
+                                    <Label text="  Tailor your entities to your needs" design="Standard" />
+
+                                    <Input
+                                        value=""
+                                        name="EntityName"
+                                        id="aa"
+                                        class="  tag-attribute  tag-value"
+                                        placeholder="EntityName"
+                                    />
+                                    <Input
+                                        value=""
+                                        name="sap:label"
+                                        id="aaa"
+                                        class="  tag-attribute  tag-value"
+                                        placeholder="EntityLabel"
+                                    />
+                                    <Input
+                                        value="1"
+                                        name="sap:content-version"
+                                        id="aaaa"
+                                        class="  tag-attribute  tag-value"
+                                        placeholder="EntityLabel"
+                                        visible="false"
+                                        
+                                    />
                                
-                                <Label text="Discount"/>
-                                <Input value=""/>
+                                <Label text="Customize Entity's Keys:" design="Bold" />
 
-                            <core:Title text="Address Data"/>
-                                <Label text="Street"/>
-                                <Input value=""/>
+                                <VBox
+                                    class="tag"
+                                    id="key"
+                                >
+                                   
+                                    <VBox
+                                        id="PropertyRef"
+                                        class="tag no-closing-tag"
+                                    >
+                                        <Input
+                                            class="tag-attribute tag-value"
+                                            placeholder="KeyName"
+                                            value=""
+                                        />
+                                        <Select class="  tag-attribute" name="Type" ></Select>
+                                    </VBox>
+                                    
 
-                                <Label text="Post Code"/>
-                                <Input value=""/>
+                                  
+                                     <Label text="Customize Entity's Properties:" design="Bold" />
+                                
+                                </VBox>
+                                 <VBox
+                                        id="Property"
+                                        class="tag no-closing-tag"
+                                    > 
+                                <Input
+                                    value=""
+                                    class=" tag-attribute  tag-value"
+                                    name="Name"
+                                    placeholder="PropertyName"
+                                />
+                                </VBox>
+                                 </VBox>
 
-                                <Label text="City"/>
-                                <Input value=""/>
+                               
+                            </VBox>
+                        </VBox>
 
-                                <Label text="Country"/>
-                                <Input value=""/>                  
+                        <VBox
+                            width="100%"
+                            id="Propertiesd"
+                            class="section"
+                        >
+                            <VBox
+                                id="EntityType2"
+                                class="tag-group "
+                            >
+                                <VBox
+                                    class="tag"
+                                    id="Properties"
+                                >
+                                    <Label text="Customize Your Associations :" design="Bold" />
+                                    <Label text="Associate your entities:" design="Standard" />
 
-                            <core:Title text="Contact Data"/>
-                                <Label text="Email"/>                    
-                                <Input value=""/>
+                                    <Input value="" />
 
-                                <Label text="Telephone"/>
-                                <Input value=""/>                     
-                        </f:content>
-                    </f:SimpleForm>
+                                 
+                                </VBox>
+                            </VBox>
+                        </VBox>
+                    </VBox>
                 </content>
-            </Panel> 
+            </Panel>
+            
+            <TextArea
+                id="outputTextArea"
+                rows="5"
+                width="100%"
+                editable="false"
+                valueState="Information"
+                visible="false"
+                growing="true"
+            />
+
+            <Panel />
         </content>
     </Page>
-   
 </mvc:View>
